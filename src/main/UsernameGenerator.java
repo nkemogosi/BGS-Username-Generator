@@ -103,10 +103,14 @@ public class UsernameGenerator {
 
 	private String createPassword() {
 		Random r = new Random();
-		return new String(adjectives[r.nextInt(adjectives.length)] + nouns[r.nextInt(nouns.length)]); // creating
-																										// passwords
-																										// from the two
-																										// arrays
+		StringBuilder sBuilder = new StringBuilder();
+		sBuilder.append(adjectives[r.nextInt(adjectives.length)]);
+		sBuilder.append(nouns[r.nextInt(nouns.length)]);
+		sBuilder.append(r.nextInt(100));
+		return sBuilder.substring(0, 1).toUpperCase() + sBuilder.substring(1);
+		// creating passwords
+		// from the two
+		// arrays
 	}
 
 	private int getNumber(String userName) {

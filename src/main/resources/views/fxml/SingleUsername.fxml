@@ -76,6 +76,11 @@
                   <String fx:value="custom-label" />
                   <String fx:value="custom-label-lg" />
                </styleClass></Label>
+               <Label fx:id="progressLabel" styleClass="custom-label" stylesheets="@../../css/application.css">
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
 			</children>
 		</AnchorPane>
 	</left>
