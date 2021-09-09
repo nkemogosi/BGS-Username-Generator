@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="382.0" prefWidth="640.0" styleClass="background-theme" stylesheets="@../../css/application.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+	<top>
+		<ToolBar prefHeight="23.0" prefWidth="681.0" styleClass="background-theme-complement" stylesheets="@../../css/application.css" BorderPane.alignment="CENTER">
+			<items>
+				<Button mnemonicParsing="false" styleClass="custom-button" stylesheets="@../../css/application.css" text="Help" />
+			</items>
+		</ToolBar>
+	</top>
+	<left>
+		<AnchorPane prefHeight="420.0" prefWidth="642.0" BorderPane.alignment="CENTER">
+			<children>
+				<HBox layoutY="220.0" prefHeight="41.0" prefWidth="642.0">
+					<children>
+						<Button fx:id="generateBtn" mnemonicParsing="false" onAction="#generate" prefHeight="48.0" prefWidth="109.0" styleClass="custom-button" stylesheets="@../../css/application.css" text="Generate">
+							<HBox.margin>
+								<Insets left="86.0" />
+							</HBox.margin>
+						</Button>
+						<Button fx:id="previewBtn" mnemonicParsing="false" onAction="#openPreviewWindow" prefHeight="48.0" prefWidth="109.0" styleClass="custom-button" stylesheets="@../../css/application.css" text="Preview">
+							<HBox.margin>
+								<Insets />
+							</HBox.margin>
+						</Button>
+						<Button fx:id="saveBtn" mnemonicParsing="false" onAction="#save" prefHeight="48.0" prefWidth="109.0" styleClass="custom-button" stylesheets="@../../css/application.css" text="Save">
+							<HBox.margin>
+								<Insets />
+							</HBox.margin>
+						</Button>
+					</children>
+				</HBox>
+				<GridPane layoutY="108.0" prefHeight="61.0" prefWidth="623.0">
+					<columnConstraints>
+						<ColumnConstraints hgrow="SOMETIMES" maxWidth="261.0" minWidth="10.0" prefWidth="38.0" />
+						<ColumnConstraints hgrow="SOMETIMES" maxWidth="460.0" minWidth="10.0" prefWidth="460.0" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints maxHeight="51.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+						<RowConstraints maxHeight="67.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+					</rowConstraints>
+					<children>
+						<TextField fx:id="surnameTextField" prefHeight="28.0" prefWidth="460.0" GridPane.columnIndex="1" />
+						<TextField fx:id="forenameTextField" prefHeight="28.0" prefWidth="460.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+						<BorderPane prefHeight="200.0" prefWidth="200.0">
+							<center>
+								<Label styleClass="custom-label" stylesheets="@../../css/application.css" text="Surname" BorderPane.alignment="CENTER" />
+							</center>
+						</BorderPane>
+						<BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+							<center>
+								<Label styleClass="custom-label" stylesheets="@../../css/application.css" text="Forename" BorderPane.alignment="CENTER" />
+							</center>
+						</BorderPane>
+					</children>
+				</GridPane>
+				<Label fx:id="infoLabel" layoutX="14.0" layoutY="24.0" stylesheets="@../../css/application.css" text="Single Entry for">
+               <font>
+                  <Font name="Candara Bold" size="42.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="custom-label" />
+                  <String fx:value="custom-label-lg" />
+               </styleClass></Label>
+			</children>
+		</AnchorPane>
+	</left>
+</BorderPane>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="382.0" prefWidth="633.0" styleClass="root" stylesheets="@../../css/application.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controllers.MainController">
+   <top>
+      <ToolBar prefHeight="31.0" prefWidth="681.0" styleClass="background-theme-complement" stylesheets="@../../css/application.css">
+        <items>
+          <Button mnemonicParsing="false" text="Help" />
+        </items>
+      </ToolBar>
+   </top>
+   <left>
+      <ImageView fitHeight="280.0" fitWidth="356.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../../images/logo.png" />
+         </image>
+      </ImageView>
+   </left>
+   <right>
+      <VBox prefHeight="330.0" prefWidth="274.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#createNewYear7" prefHeight="91.0" prefWidth="254.0" stylesheets="@../../css/application.css" text="Year 7">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <styleClass>
+                  <String fx:value="custom-button-lg" />
+                  <String fx:value="custom-button-lg-padding" />
+                  <String fx:value="custom-button" />
+               </styleClass>
+               <font>
+                  <Font name="Candara Bold" size="36.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#createNewYear12" prefHeight="91.0" prefWidth="254.0" stylesheets="@../../css/application.css" text="Year 12">
+               <styleClass>
+                  <String fx:value="custom-button-lg" />
+                  <String fx:value="custom-button-lg-padding" />
+                  <String fx:value="custom-button" />
+               </styleClass>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#createSingleStudent" prefHeight="91.0" prefWidth="254.0" stylesheets="@../../css/application.css" text="Add Single User">
+               <font>
+                  <Font name="Candara Bold" size="24.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="custom-button-lg-padding" />
+                  <String fx:value="custom-button" />
+                  <String fx:value="add-single-button" />
+               </styleClass>
+            </Button>
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <Line endX="-100.0" endY="331.29290771484375" fill="#205783" startX="-100.0" stroke="#205783" strokeWidth="10.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

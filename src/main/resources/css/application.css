@@ -1,0 +1,55 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.root{
+    -fx-font-size: 10.0pt;
+    -fx-font-family: "Chandra";
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #003f72;
+}
+.custom-label{
+	-fx-font-family: "Chandra";
+    -fx-text-fill: #ffffff;
+     -fx-background-color: #003f72;
+    
+}
+
+.custom-label-lg{
+	-fx-font-size: 24.0pt;
+    
+}
+
+.list-cell{
+		-fx-font-family: "Chandra";
+    -fx-text-fill: #000000;
+}
+.custom-button:hover{
+	-fx-background-color: #161f32;
+	-fx-cursor: hand;
+}
+.custom-button{
+	-fx-background-color: #003f72;
+	-fx-text-fill: #ffffff;
+
+	
+}
+.custom-button-lg-padding{
+	-fx-padding: 20.0px;
+    -fx-border-insets: 20.0px;
+    -fx-background-insets: 10.0px;
+    -fx-font-weight: bold;
+}
+
+.add-single-button{
+	-fx-font-size: 20.0pt;
+}
+.custom-button-lg{
+	-fx-font-size: 28.0pt;	
+}
+
+.background-theme{
+	-fx-background-color: #003f72;
+}
+
+.background-theme-complement{
+	-fx-background-color: #205783;
+}

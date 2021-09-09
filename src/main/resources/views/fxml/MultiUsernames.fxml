@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane prefHeight="382.0" prefWidth="640.0" styleClass="background-theme" stylesheets="@../../css/application.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <ToolBar prefHeight="23.0" prefWidth="681.0" styleClass="background-theme-complement" stylesheets="@../../css/application.css" BorderPane.alignment="CENTER">
+        <items>
+          <Button mnemonicParsing="false" text="Button" />
+        </items>
+      </ToolBar>
+   </top>
+   <left>
+      <AnchorPane prefHeight="420.0" prefWidth="642.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutY="220.0" prefHeight="41.0" prefWidth="642.0">
+               <children>
+                  <Button fx:id="generateBtn" mnemonicParsing="false" onAction="#generate" prefHeight="48.0" prefWidth="109.0" styleClass="custom-button" stylesheets="@../../css/application.css" text="Generate">
+                     <HBox.margin>
+                        <Insets left="86.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="previewBtn" mnemonicParsing="false" onAction="#openPreviewList" prefHeight="48.0" prefWidth="109.0" styleClass="custom-button" stylesheets="@../../css/application.css" text="Preview">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#save" prefHeight="48.0" prefWidth="109.0" styleClass="custom-button" stylesheets="@../../css/application.css" text="Save">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <GridPane layoutY="108.0" prefHeight="111.0" prefWidth="623.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="261.0" minWidth="10.0" prefWidth="38.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="460.0" minWidth="10.0" prefWidth="460.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="25.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#openFileDialog" prefHeight="28.0" prefWidth="34.0" text="Button" GridPane.columnIndex="2" />
+                  <TextField fx:id="filePathTextField" prefHeight="28.0" prefWidth="460.0" GridPane.columnIndex="1" />
+                  <Label prefHeight="20.0" prefWidth="96.0" text="File:" textFill="WHITE">
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </GridPane>
+            <Label fx:id="infoLabel" layoutX="14.0" layoutY="24.0" stylesheets="@../../css/application.css" text="Label">
+               <styleClass>
+                  <String fx:value="custom-label" />
+                  <String fx:value="custom-label-lg" />
+               </styleClass></Label>
+            <HBox layoutX="30.0" layoutY="279.0" prefHeight="32.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="progressIcon" disable="true" fitHeight="38.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../../images/loading-buffering.gif" />
+                     </image></ImageView>
+                  <Label fx:id="progressLabel" styleClass="custom-label" stylesheets="@../../css/application.css">
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>
